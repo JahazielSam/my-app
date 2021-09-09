@@ -1,0 +1,10 @@
+<div class="wrapper">
+    <div class="card col-md-3">
+        <div *ngFor="let student of studentData">
+            <label for="">{{student.name}}</label>
+            <input type="radio" [name]="student.name" [(ngModel)]="student.attendanceStatus" [value]="true"/>Present
+            <input type="radio" [name]="student.name" [(ngModel)]="student.attendanceStatus" [value]="false" />Absent
+        </div>
+    </div>
+    <button (click)="submitadd()">Submit attendance</button>
+</div>
